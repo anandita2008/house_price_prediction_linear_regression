@@ -24,3 +24,84 @@ AI101 Mini project:House Price Prediction using Linear Regression on an Indian h
 |Aditya Santosh Madane|2026AIB1005|
 |Korra Akhil|2026MCB1536|
 
+## 🗂️ Project Structure
+
+<p align="center">
+  <b>🏡 HOUSE PRICE PREDICTION</b><br/>
+  <i>AI Mini-Project | IIT Ropar</i>
+</p>
+
+```text
+🏡 House-Price-Prediction/
+│
+├── 📂 data/
+│   └── Bengaluru_House_Data.csv
+│
+├── 📂 src/
+│   ├── main.py
+│   ├── plots.py
+│   
+│
+├── 📂 outputs/
+│   ├── actual_vs_predicted.png
+│   └── model_evaluation.txt
+│
+├── 📂 presentation/
+│   └── house_price_prediction.pptx
+│
+├──
+│   └── README.md
+│
+├── 📄 requirements.txt
+├── 📄 README.md
+└── 📄 .gitignore
+```
+
+### 📁 Directory Guide
+
+| Component | Description |
+|:--|:--|
+| 📂 `data/` | Dataset used for house price prediction |
+| 📂 `src/` | Python code for data preprocessing, model training and prediction |
+| 📂 `outputs/` | Model evaluation results and prediction visualizations |
+| 📂 `presentation/` | Project presentation slides |
+| 📂 `video/` | Project demonstration video link |
+| 📄 `requirements.txt` | Required Python packages |
+| 📄 `README.md` | Project overview, setup and execution instructions |
+| 📄 `.gitignore` | Files and folders Git should ignore |
+
+### ⚙️ Project Workflow
+
+**Dataset** → **Data Cleaning** → **Feature Selection** → **Linear Regression** → **Price Prediction** → **Model Evaluation**
+
+---
+
+<p align="center">
+  <i>Built with Python • Pandas • NumPy • Scikit-learn</i>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🤖 AI-Use Disclosure
+
+AI tools were used to support the development and documentation of this mini-project.
+
+- **ChatGPT:** Assisted with project planning, README documentation, understanding Python and machine learning concepts, and debugging suggestions.
+- **Human verification:** The team is responsible for reviewing, understanding, testing, and validating the code and project outputs.
+- **Dataset and results:** The dataset and model evaluation results are handled separately from AI-generated suggestions. No claim is made that AI generated or verified the results.
+
+**Declaration:** AI tools were used as assistants for learning and development. All team members are responsible for understanding the implementation and explaining the project during evaluation.
+
