@@ -1,5 +1,20 @@
 #main program for house price prediction using linear regression 
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn
+
+#verify that the libraries are installed and working
+print("NumPy:", np.__version__)
+print("Pandas:", pd.__version__)
+print("Matplotlib:", plt.matplotlib.__version__)
+print("Scikit-learn:", sklearn.__version__)
+
+print("\nAll four libraries are working!")
+
+
+
 import pandas as pd
 
 # Load the dataset
