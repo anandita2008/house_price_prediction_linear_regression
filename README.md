@@ -19,10 +19,10 @@ AI101 Mini project:House Price Prediction using Linear Regression on an Indian h
 # **TEAM MEMBERS AND ROLES**
 |Name|Roll Number | Role|
 |---|---|---|
-|Anandita Chaudhary|2026AIB1011|
-|Divesh Singla|2026EEB1346|
-|Aditya Santosh Madane|2026AIB1005|
-|Korra Akhil|2026MCB1536|
+|Anandita Chaudhary|2026AIB1011|documentation lead|
+|Divesh Singla|2026EEB1346|video lead|
+|Aditya Santosh Madane|2026AIB1005|ppt lead|
+|Korra Akhil|2026MCB1536|execution lead|
 
 ## 🗂️ Project Structure
 
