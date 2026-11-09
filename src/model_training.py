@@ -17,10 +17,15 @@ def train_and_evaluate(df):
 
     # 1. Select input features and target variable
 
-    X = df[
-        ["area_type", "location", "bhk",
-         "total_sqft", "bath", "balcony"]
-    ]
+    df["bhk"] = pd.to_numeric(
+    df["size"].str.extract(r"(\d+\.?\d*)")[0],
+    errors="coerce"
+)
+
+X = df[
+    ["area_type", "location", "bhk",
+     "total_sqft", "bath", "balcony"]
+]
 
     y = df["price"]
 
