@@ -12,28 +12,28 @@ import re
 
 
 # Convert total_sqft values into numerical square feet
-def convert_sqft(value):
+import pandas as pd
+import re
 
+def convert_sqft(value):
     value = str(value).strip()
 
     # Handle ranges such as 2100 - 2850
-    range_match = re.fullmatch(
-        r"([\d.]+)\s*-\s*([\d.]+)", value
-    )
-
+    range_match = re.fullmatch(r"(\d+\.?\d*)\s*-\s*(\d+\.?\d*)", value)
     if range_match:
         low = float(range_match.group(1))
         high = float(range_match.group(2))
         return (low + high) / 2
 
     # Extract number and optional unit
-    match = re.fullmatch(r"([\d.]+)\s*(.*?)", value)
-
+    match = re.fullmatch(r"(\d+\.?\d*)\s*(.*?)", value)
     if not match:
         return None
 
     number = float(match.group(1))
     unit = match.group(2).lower().replace(".", "").strip()
+    
+
 
     # Convert supported units into square feet
     conversions = {
@@ -55,8 +55,8 @@ def convert_sqft(value):
 
 
 # Main preprocessing function
-def load_and_clean_data(file_path):
-
+# Main preprocessing function
+def load_and_clean_data(file_path="data/bengaluru_house_prices.csv"):
     # 1. Load dataset
     df = pd.read_csv(file_path)
 
@@ -69,12 +69,9 @@ def load_and_clean_data(file_path):
     df = df.dropna(subset=["location"])
 
     # 4. Convert size into numerical BHK
-    df["bhk"] = df["size"].astype(str).str.extract(
-        r"(\d+)"
-    )
-
     df["bhk"] = pd.to_numeric(
-        df["bhk"], errors="coerce"
+    df["size"].astype(str).str.extract(r"(\d+)", expand=False), 
+    errors="coerce"
     )
 
     # 5. Convert total_sqft into numerical values
@@ -88,7 +85,7 @@ def load_and_clean_data(file_path):
 
     # 6. Remove rows with essential missing values
     df = df.dropna(
-        subset=["bhk", "total_sqft", "price"]
+        subset=["area_type","bhk", "total_sqft", "price"]
     )
 
     # 7. Fill missing numerical values

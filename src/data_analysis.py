@@ -7,7 +7,7 @@ def analyze_data(df):
     print("Dataset Shape:", df.shape)
 
     print("\nDataset Information:")
-    print(df.info())
+    df.info()
 
     # 2. Statistical analysis
     print("\nStatistical Summary:")
