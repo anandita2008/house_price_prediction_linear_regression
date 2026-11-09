@@ -41,9 +41,9 @@ def generate_data_plots(df, y_test, y_pred):
         plt.show()
         plt.close()
 
-    # 3. BHK vs House Price
-       if "bhk" in df.columns:
-           bhk = pd.to_numeric(df["bhk"], errors="coerce")
+   
+    if "bhk" in df.columns:
+        bhk = pd.to_numeric(df["bhk"], errors="coerce")
 
         valid = bhk.notna() & df["price"].notna()
 
