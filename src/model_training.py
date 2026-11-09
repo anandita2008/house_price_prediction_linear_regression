@@ -99,5 +99,6 @@ def train_and_evaluate(df):
         "rmse": rmse,
         "r2": r2
     }
-
+    # Generate plots
+    generate_model_plots(y_test, y_pred)
     return results
