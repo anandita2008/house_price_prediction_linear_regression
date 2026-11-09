@@ -15,17 +15,17 @@ from sklearn.metrics import r2_score
 
 def train_and_evaluate(df):
 
-    # 1. Select input features and target variable
+       # 1. Select input features and target variable
 
     df["bhk"] = pd.to_numeric(
-    df["size"].str.extract(r"(\d+\.?\d*)")[0],
-    errors="coerce"
-)
+        df["size"].str.extract(r"(\d+\.?\d*)")[0],
+        errors="coerce"
+    )
 
-X = df[
-    ["area_type", "location", "bhk",
-     "total_sqft", "bath", "balcony"]
-]
+    X = df[
+        ["area_type", "location", "bhk",
+         "total_sqft", "bath", "balcony"]
+    ]
 
     y = df["price"]
 
