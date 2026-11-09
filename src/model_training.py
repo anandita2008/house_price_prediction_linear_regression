@@ -1,6 +1,6 @@
 
 # Import required libraries
-
+from plots import generate_model_plots
 import pandas as pd
 import numpy as np
 
