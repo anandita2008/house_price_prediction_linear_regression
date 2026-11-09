@@ -100,5 +100,5 @@ def train_and_evaluate(df):
         "r2": r2
     }
     # Generate plots
-    generate_model_plots(y_test, y_pred)
+    generate_data_plots(df, y_test, y_pred)
     return results
