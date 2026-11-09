@@ -21,6 +21,10 @@ def train_and_evaluate(df):
         df["size"].str.extract(r"(\d+\.?\d*)")[0],
         errors="coerce"
     )
+    df["total_sqft"] = pd.to_numeric(
+    df["total_sqft"].astype(str).str.split("-").str[0],
+            errors="coerce"
+    )
 
     X = df[
         ["area_type", "location", "bhk",
