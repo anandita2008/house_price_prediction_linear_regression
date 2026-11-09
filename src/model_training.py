@@ -60,7 +60,8 @@ def train_and_evaluate(df):
 
 
     # 5. Train the model
-
+    X_train = X_train.fillna(X_train.median(numeric_only=True))
+    X_test = X_test.fillna(X_train.median(numeric_only=True))
     model.fit(X_train, y_train)
 
     print("Model training completed successfully!")
