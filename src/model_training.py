@@ -16,7 +16,11 @@ from sklearn.metrics import r2_score
 def train_and_evaluate(df):
 
     df["bhk"] = pd.to_numeric(
+<<<<<<< Updated upstream
         df["bhk"],
+=======
+        df["bhk"].astype(str).str.extract(r"(\d+\.?\d*)")[0],
+>>>>>>> Stashed changes
         errors="coerce"
     )
 
