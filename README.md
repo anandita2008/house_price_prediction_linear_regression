@@ -195,6 +195,12 @@ deactivate
 
 
 # output
+-graph between actual bs predicted.png
+-area vs price
+-bhk vs price
+
+
+
 
 
 
