@@ -16,7 +16,7 @@ from sklearn.metrics import r2_score
 def train_and_evaluate(df):
 
     df["bhk"] = pd.to_numeric(
-        df["size"].astype(str).str.extract(r"(\d+\.?\d*)")[0],
+        df["bhk"],
         errors="coerce"
     )
 
