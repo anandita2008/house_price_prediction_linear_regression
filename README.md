@@ -147,17 +147,11 @@ After successful execution, check the `outputs` folder for generated results, in
 - Predictions CSV file
 - Trained Linear Regression model (`.pkl`)
 
-### 9. Deactivate the Virtual Environment
 
-After completing the execution, run:
-
-```bash
-deactivate
-```
 
 **Note:** Make sure Python 3 is installed on your computer and that you execute the commands from the project root directory.
 
-
+# output
 
 
 
