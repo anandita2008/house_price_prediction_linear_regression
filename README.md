@@ -80,7 +80,82 @@ AI101 Mini project:House Price Prediction using Linear Regression on an Indian h
   <i>Built with Python • Pandas • NumPy • Scikit-learn</i>
 </p>
 
+## How to Run the Project
 
+Follow these steps to run the Bengaluru House Price Prediction project on your computer.
+
+### 1. Clone the Repository
+
+Open Terminal and run:
+
+```bash
+git clone https://github.com/anandita2008/house_price_prediction_linear_regression.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd house_price_prediction_linear_regression
+```
+
+
+
+
+
+### 3. Install Required Libraries
+
+Install all project dependencies using:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+### 4. Check the Dataset
+
+Make sure the dataset file is present inside the `data` folder:
+
+```text
+data/bengaluru_house_prices.csv
+```
+
+### 5. Run the Project
+
+Execute the main Python file:
+
+```bash
+python3 src/main.py
+```
+
+The program will automatically:
+
+1. Load and preprocess the Bengaluru house price dataset.
+2. Perform exploratory data analysis.
+3. Generate visualizations.
+4. Train a Linear Regression model.
+5. Evaluate model performance.
+6. Save the trained model and prediction results.
+
+### 6. View the Results
+
+After successful execution, check the `outputs` folder for generated results, including:
+
+- Data visualization graphs
+- Actual vs Predicted price plot
+- Residual plot
+- Correlation heatmap
+- Model evaluation results
+- Predictions CSV file
+- Trained Linear Regression model (`.pkl`)
+
+### 9. Deactivate the Virtual Environment
+
+After completing the execution, run:
+
+```bash
+deactivate
+```
+
+**Note:** Make sure Python 3 is installed on your computer and that you execute the commands from the project root directory.
 
 
 
