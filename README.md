@@ -189,6 +189,24 @@ deactivate
 ```
 
 **Note:** Python 3 and Git must be installed on your computer. Always execute the commands from the project's root directory.
+## Viewing Trained Model Details
+
+The project includes an additional Python script, `view_model.py`, to inspect the saved Linear Regression model.
+
+After running the main project, execute the following command from the project root directory:
+
+```bash
+python3 view_model.py
+```
+
+This script displays:
+- Model type
+- Model intercept
+- Model coefficients
+- Feature names used by the trained model
+
+**Note:** This is an optional utility script. It is not required to run the main project. Run `src/main.py` first to generate the latest trained model.
+
 
 
 
