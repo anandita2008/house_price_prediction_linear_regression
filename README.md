@@ -231,10 +231,9 @@ The project includes an additional Python script, `view_model.py`, to inspect th
 
 
 # output
--graph between actual bs predicted.png
--area vs price
--bhk vs price
+## Expected Output
 
+![Expected Output](outputs/expected_output.png)
 
 
 
