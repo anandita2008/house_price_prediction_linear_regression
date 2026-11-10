@@ -15,17 +15,10 @@ from sklearn.metrics import r2_score
 
 def train_and_evaluate(df):
 
-    df["bhk"] = pd.to_numeric(
-<<<<<<< Updated upstream
-        df["bhk"],
-=======
-        df["bhk"].astype(str).str.extract(r"(\d+\.?\d*)")[0],
->>>>>>> Stashed changes
-        errors="coerce"
-    )
+    df["bhk"] = pd.to_numeric(df["bhk"], errors="coerce")
 
     df["total_sqft"] = pd.to_numeric(
-        df["bhk"],
+        df["total_sqft"],
         errors="coerce"
     )
 

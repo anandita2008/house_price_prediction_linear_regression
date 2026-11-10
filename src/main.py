@@ -2,6 +2,7 @@ import os
 from data_preprocessing import load_and_clean_data
 from data_analysis import analyze_data
 from model_training import train_and_evaluate
+from plots import generate_data_plots
 
 
 def main():
