@@ -1,3 +1,4 @@
+#this folder is for if we want to see the coefficients and all of our model
 import joblib
 
 model = joblib.load("outputs/linear_regression_model.pkl")
