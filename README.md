@@ -193,17 +193,35 @@ deactivate
 
 The project includes an additional Python script, `view_model.py`, to inspect the saved Linear Regression model.
 
-After running the main project, execute the following command from the project root directory:
+### How to Open and Run view_model.py
 
-```bash
-python3 view_model.py
-```
+1. Open the project folder in Terminal:
 
-This script displays:
-- Model type
-- Model intercept
-- Model coefficients
-- Feature names used by the trained model
+   ```bash
+   cd house_price_prediction_linear_regression
+   ```
+
+2. Open the `view_model.py` file in the text editor:
+
+   ```bash
+   open -e view_model.py
+   ```
+
+3. To execute the script, run:
+
+   ```bash
+   python3 view_model.py
+   ```
+
+4. The script displays:
+   - Model type
+   - Model coefficients
+   - Model intercept
+   - Feature names used by the trained model
+
+**Note:** Run `src/main.py` first to generate the trained model file. Then execute `view_model.py` to inspect it.
+
+
 
 **Note:** This is an optional utility script. It is not required to run the main project. Run `src/main.py` first to generate the latest trained model.
 
