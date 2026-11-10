@@ -21,7 +21,7 @@ def train_and_evaluate(df):
     )
 
     df["total_sqft"] = pd.to_numeric(
-        df["total_sqft"].astype(str).str.split("-").str[0],
+        df["bhk"],
         errors="coerce"
     )
 
