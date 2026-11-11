@@ -24,6 +24,8 @@ AI101 Mini project:House Price Prediction using Linear Regression on an Indian h
 |Aditya Santosh Madane|2026AIB1005|ppt lead|
 |Korra Akhil|2026MCB1536|execution lead|
 
+
+
 ## 🗂️ Project Structure
 
 <p align="center">
@@ -238,9 +240,7 @@ The project includes an additional Python script, `view_model.py`, to inspect th
 **Note:** This is an optional utility script. It is not required to run the main project. Run `src/main.py` first to generate the latest trained model.
 
 
-
-
-
+##project representation video link:https://youtu.be/i0edTlJRrKw?si=d-7ohR1Sc8OFMhmN
 
 # output
 ## Expected Output
