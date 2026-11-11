@@ -31,31 +31,34 @@ AI101 Mini project:House Price Prediction using Linear Regression on an Indian h
   <i>AI Mini-Project | IIT Ropar</i>
 </p>
 
-```text
-🏡 House-Price-Prediction/
+house_price_prediction_linear_regression/
 │
-├── 📂 data/
-│   └── Bengaluru_House_Data.csv
+├── data/
+│   └── bengaluru_house_prices.csv
 │
-├── 📂 src/
+├── src/
 │   ├── main.py
+│   ├── data_preprocessing.py
+│   ├── data_analysis.py
+│   ├── model_training.py
 │   ├── plots.py
-│   
+│   └── view_model.py
 │
-├── 📂 outputs/
+├── outputs/
 │   ├── actual_vs_predicted.png
-│   └── model_evaluation.txt
+│   ├── area_vs_price.png
+│   ├── bhk_vs_price.png
+│   ├── correlation_heatmap.png
+│   ├── price_distribution.png
+│   ├── residual_plot.png
+│   ├── expected_output.png
+│   ├── predictions.csv
+│   └── results.txt
 │
-├── 📂 presentation/
-│   └── house_price_prediction.pptx
-│
-├──
-│   └── README.md
-│
-├── 📄 requirements.txt
-├── 📄 README.md
-└── 📄 .gitignore
-```
+├── AI101_House_Price_Prediction_Presentation_FINAL.pptx
+├── README.md
+├── requirements.txt
+└── .gitignore
 
 ### 📁 Directory Guide
 
