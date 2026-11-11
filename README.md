@@ -156,7 +156,7 @@ data/bengaluru_house_prices.csv
 Execute the main Python file from the project root directory:
 
 ```bash
-python src/main.py
+python3 src/main.py
 ```
 
 The program will automatically:
