@@ -30,3 +30,4 @@ def analyze_data(df):
     return correlation
 #I have verified data analysis part.
 #I also tried running all codes on my windows pc and they are running perfectly
+#earlier it was having issues in my laptop but now everything is running properly
