@@ -3,7 +3,7 @@ import pandas as pd
 
 def analyze_data(df):
 
-    # 1. Dataset overview
+    # 1. Dataset 
     print("Dataset Shape:", df.shape)
 
     print("\nDataset Information:")
