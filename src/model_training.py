@@ -1,6 +1,7 @@
 
 # Import required libraries
 from plots import generate_data_plots
+
 import pandas as pd
 import numpy as np
 import os
@@ -15,15 +16,11 @@ from sklearn.metrics import r2_score
 
 def train_and_evaluate(df):
 
-<<<<<<< HEAD
-    df["bhk"] = pd.to_numeric(df["bhk"], errors="coerce")
-=======
     # Convert BHK into numeric values
     df["bhk"] = pd.to_numeric(
         df["bhk"].astype(str).str.extract(r"(\d+\.?\d*)")[0],
         errors="coerce"
     )
->>>>>>> 4aecc19 (Fix model training and update outputs)
 
     # Convert total_sqft into numeric values
     df["total_sqft"] = pd.to_numeric(
@@ -31,11 +28,13 @@ def train_and_evaluate(df):
         errors="coerce"
     )
 
+    # Select features
     X = df[
         ["area_type", "location", "bhk",
          "total_sqft", "bath", "balcony"]
     ]
 
+    # Target variable
     y = df["price"]
 
     # Convert categorical data into numerical data
@@ -48,82 +47,71 @@ def train_and_evaluate(df):
 
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(
-        X,
-        y,
-        test_size=0.2,
-        random_state=42
+        X, y, test_size=0.2, random_state=42
     )
 
     # Handle missing values
     medians = X_train.median()
+
     X_train = X_train.fillna(medians)
     X_test = X_test.fillna(medians)
 
-    # Create and train model
+    # Train Linear Regression model
     model = LinearRegression()
     model.fit(X_train, y_train)
 
-    print("Model training completed successfully!")
-
-    # Predict house prices
+    # Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    # Evaluate model
     mae = mean_absolute_error(y_test, y_pred)
     mse = mean_squared_error(y_test, y_pred)
     rmse = np.sqrt(mse)
     r2 = r2_score(y_test, y_pred)
 
-    # Display results
-    print("\nMODEL EVALUATION")
-    print("-------------------------")
-    print("Mean Absolute Error:", mae)
-    print("Mean Squared Error:", mse)
-    print("Root Mean Squared Error:", rmse)
-    print("R2 Score:", r2)
-
     # Create outputs folder
     os.makedirs("outputs", exist_ok=True)
 
-    # Save evaluation metrics
-    with open("outputs/results.txt", "w") as file:
-        file.write("MODEL EVALUATION RESULTS\n")
-        file.write("-------------------------\n")
-        file.write(f"MAE: {mae}\n")
-        file.write(f"MSE: {mse}\n")
-        file.write(f"RMSE: {rmse}\n")
-        file.write(f"R2 Score: {r2}\n")
+    # Save model
+    with open("outputs/linear_regression_model.pkl", "wb") as file:
+        pickle.dump(model, file)
 
-    # Save actual and predicted prices
+    # Save predictions
     predictions = pd.DataFrame({
         "Actual Price": y_test.values,
         "Predicted Price": y_pred
     })
 
-    predictions.to_csv(
-        "outputs/predictions.csv",
-        index=False
-    )
+    predictions.to_csv("outputs/predictions.csv", index=False)
 
-    # Save trained model
-    with open("outputs/linear_regression_model.pkl", "wb") as file:
-        pickle.dump(model, file)
+    # Save evaluation results
+    with open("outputs/results.txt", "w") as file:
+        file.write("Linear Regression Model Results\n")
+        file.write("--------------------------------\n")
+        file.write(f"MAE: {mae:.4f}\n")
+        file.write(f"MSE: {mse:.4f}\n")
+        file.write(f"RMSE: {rmse:.4f}\n")
+        file.write(f"R2 Score: {r2:.4f}\n")
 
     # Generate graphs
     generate_data_plots(df, y_test, y_pred)
 
-    # Return results
-    results = {
-        "model": model,
-        "X_test": X_test,
-        "y_test": y_test,
-        "y_pred": y_pred,
-        "mae": mae,
-        "mse": mse,
-        "rmse": rmse,
-        "r2": r2
+    # Print results
+    print("\nModel Evaluation Results")
+    print("------------------------")
+    print(f"MAE: {mae:.4f}")
+    print(f"MSE: {mse:.4f}")
+    print(f"RMSE: {rmse:.4f}")
+    print(f"R2 Score: {r2:.4f}")
+
+    print("\nModel saved successfully!")
+    print("Predictions saved successfully!")
+    print("Results saved successfully!")
+
+    return {
+        "MAE": mae,
+        "MSE": mse,
+        "RMSE": rmse,
+        "R2 Score": r2
     }
 
-    print("\nAll outputs saved successfully in outputs folder!")
-
-    return results
