@@ -240,7 +240,7 @@ The project includes an additional Python script, `view_model.py`, to inspect th
 **Note:** This is an optional utility script. It is not required to run the main project. Run `src/main.py` first to generate the latest trained model.
 
 
-##project representation video link:https://youtu.be/i0edTlJRrKw?si=d-7ohR1Sc8OFMhmN
+project representation video link:https://youtu.be/i0edTlJRrKw?si=d-7ohR1Sc8OFMhmN
 
 # output
 ## Expected Output
