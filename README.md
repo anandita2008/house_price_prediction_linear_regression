@@ -60,6 +60,7 @@ house_price_prediction_linear_regression/
 ├── requirements.txt
 └── .gitignore
 
+
 ### 📁 Directory Guide
 
 | Component | Description |
