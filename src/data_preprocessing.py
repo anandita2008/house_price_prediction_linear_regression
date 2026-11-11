@@ -21,9 +21,9 @@ def convert_sqft(value):
     # Handle ranges such as 2100 - 2850
     range_match = re.fullmatch(r"(\d+\.?\d*)\s*-\s*(\d+\.?\d*)", value)
     if range_match:
-        low = float(range_match.group(1))
-        high = float(range_match.group(2))
-        return (low + high) / 2
+        l = float(range_match.group(1))
+        h = float(range_match.group(2))
+        return (l + h) / 2
 
     # Extract number and optional unit
     match = re.fullmatch(r"(\d+\.?\d*)\s*(.*?)", value)
@@ -111,7 +111,7 @@ def load_and_clean_data(file_path="data/bengaluru_house_prices.csv"):
         (df["bhk"] > 0)
     ]
 
-    # 10. Reset row indexes
+    # 10. Reset indexes
     df = df.reset_index(drop=True)
 
     print("\nData preprocessing completed!")
@@ -120,3 +120,4 @@ def load_and_clean_data(file_path="data/bengaluru_house_prices.csv"):
     print(df.isnull().sum())
 
     return df
+    #currently running properly
